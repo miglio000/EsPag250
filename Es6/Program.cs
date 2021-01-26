@@ -6,30 +6,30 @@ namespace Es6
     {
         static void Main(string[] args)
         {
+            const int numeri = 30;
+            int[] pari = new int[30];
+            int c_pari = 0;
+            int[] dispari = new int[30];
+            int c_dispari = 0;
             Random r = new Random();
-            int j = 0, k = 0;
-            int[] arraypari = new int[30];
-            int[] arraydispari = new int[30];
-            for(int i = 0; i < 30; i++)
+            for (int i = 0; i < numeri; i++)
             {
-                int n = r.Next(30);
-                if(n % 2 == 0)
+                int n = r.Next(1, 61);
+                if (n % 2 == 0)
                 {
-                    arraypari[j] = n;
-                    j++;
+                    pari[c_pari] = n;
+                    c_pari++;
                 }
                 else
                 {
-                    arraydispari[k] = n;
-                    k++;
+                    dispari[c_dispari] = n;
+                    c_dispari++;
                 }
             }
             Console.WriteLine("I pari sono: ");
-            Gestione.StampaArray(arraypari);
-            Console.WriteLine();
+            Gestione.StampaArrayFinoALunghezza(pari, c_pari);
             Console.WriteLine("I dispari sono: ");
-            Gestione.StampaArray(arraydispari);
-            //Console.WriteLine($"I pari sono: {arraypari} \nI dispari sono: {arraydispari[k]}.");
+            Gestione.StampaArrayFinoALunghezza(dispari, c_dispari);
         }
     }
 }

@@ -46,6 +46,13 @@ namespace LibreriaEsArray
                 Console.WriteLine(array[i]);
             }
         }
+        public static void StampaArrayFinoALunghezza(int[] array, int lunghezza)
+        {
+            for (int i = 0; i < lunghezza; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+        }
     }
 }
 
